@@ -68,10 +68,10 @@ const Friends = () => {
       clearTimeout(debounceTimeout);
     }
 
-    // Set new debounce timeout
+ 
     debounceTimeout = setTimeout(() => {
       searchFriends();
-    }, 300); // Adjust debounce delay as needed
+    }, 300);
   };
 
   const sendRequest = async (recID, requesterName) => {
