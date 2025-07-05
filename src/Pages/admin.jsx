@@ -83,7 +83,7 @@ const Admin = () => {
                   className="rounded-md object-cover"
                 />
               ) : (
-                <img src="src/assets/default.png" height="50px" width="50px" />
+                <img src="/default.png" height="50px" width="50px" />
               )}
             </div>
             <div className="flex items-center">

@@ -24,7 +24,7 @@ const Login = () => {
       <div className="flex flex-col md:flex-row items-center justify-between bg-white w-full max-w-4xl h-auto md:h-[500px] rounded-3xl shadow-xl overflow-hidden">
         <div className="flex flex-col items-center space-y-4 justify-center w-full md:w-[55%] p-6 md:p-10">
           <img
-            src="src/assets/logo.png"
+            src="/logo.png"
             alt=""
             className="w-24 h-24 md:w-28 md:h-28"
           />

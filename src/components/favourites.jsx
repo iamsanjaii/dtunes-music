@@ -4,7 +4,6 @@ import { FaPlay } from "react-icons/fa";
 import { collection, getDocs, doc, deleteDoc } from "firebase/firestore";
 import { db } from "../Firebase/firebaseconfig";
 import { AiFillDelete } from "react-icons/ai";
-import defMusic from "../assets/default.png";
 
 const Favourites = () => {
   const [fav, setFav] = useState([]);
@@ -74,7 +73,7 @@ const Favourites = () => {
                   />
                 ) : (
                   <img
-                    src="src/assets/default.png"
+                    src="/default.png"
                     height="50px"
                     width="50px"
                     alt=""
@@ -108,7 +107,7 @@ const Favourites = () => {
           <div className="flex items-center space-x-10 text-white ">
             <div className="flex items-center space-x-3">
               <img
-                src={defMusic}
+                src="/default.png"
                 height="40px"
                 width="40px"
                 className="rounded-md"

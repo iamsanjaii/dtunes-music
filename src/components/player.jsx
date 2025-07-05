@@ -187,7 +187,7 @@ const Player = () => {
             src={
               currentSong.songCover
                 ? currentSong.songCover
-                : "src/assets/default.png"
+                : "/default.png"
             }
             height="50px"
             width="50px"

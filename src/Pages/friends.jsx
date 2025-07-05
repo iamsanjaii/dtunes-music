@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import defMusic from "../assets/default.png";
+import { useEffect, useState } from "react";
 import { FaUserFriends, FaSearch } from "react-icons/fa";
 import { db } from "../Firebase/firebaseconfig";
 import { getAuth } from "firebase/auth";
@@ -68,7 +67,6 @@ const Friends = () => {
       clearTimeout(debounceTimeout);
     }
 
- 
     debounceTimeout = setTimeout(() => {
       searchFriends();
     }, 300);
@@ -154,7 +152,12 @@ const Friends = () => {
                 className="flex items-center p-2 rounded-md justify-between bg-opacity-30 backdrop-filter backdrop-blur-lg bg-customRed"
               >
                 <div className="flex space-x-3 items-center">
-                  <FaUserFriends className="text-white text-3xl" />
+                  <img
+                    src={"/default.png"}
+                    height="40px"
+                    width="40px"
+                    className="rounded-md"
+                  />
                   <h2 className="font-bold text-md text-white">{user.name}</h2>
                 </div>
                 <div className="flex space-x-3">
@@ -179,7 +182,12 @@ const Friends = () => {
                   className="flex items-center p-2 rounded-md justify-between bg-opacity-30 backdrop-filter backdrop-blur-lg bg-customRed"
                 >
                   <div className="flex space-x-3 items-center">
-                    <FaUserFriends className="text-white text-3xl" />
+                    <img
+                      src={"/default.png"}
+                      height="40px"
+                      width="40px"
+                      className="rounded-md"
+                    />
                     <h2 className="font-bold text-md text-white">
                       {request.senderName}
                     </h2>

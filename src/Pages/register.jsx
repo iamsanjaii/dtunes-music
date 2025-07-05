@@ -46,7 +46,7 @@ const Register = () => {
         </div>
         <div className="flex flex-col items-center space-y-4 justify-center w-full md:w-[55%] p-6 md:p-10">
           <img
-            src="src/assets/logo.png"
+            src="/logo.png"
             alt=""
             className="w-24 h-24 md:w-28 md:h-28"
           />

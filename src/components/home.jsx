@@ -1,16 +1,19 @@
-import React, { useEffect, useState } from "react";
-import { IoMenu } from "react-icons/io5";
+import { useEffect, useState } from "react";
+
 import { FaGreaterThan, FaLessThan, FaPlay } from "react-icons/fa";
 import { collection, getDocs, doc } from "firebase/firestore";
 import { txtDB } from "../Firebase/firebaseconfig";
 import { db } from "../Firebase/firebaseconfig";
 import { getAuth } from "firebase/auth";
-import anirudh from "../assets/artists/Anirudh.jpeg";
-import travis from "../assets/artists/fein.jpeg";
-import yuvan from "../assets/artists/yuvan.jpeg";
-import edsheeran from "../assets/artists/Edsheeran.jpeg";
-import dualipa from "../assets/artists/levitating.jpeg";
-import workut from "../assets/artists/workout.jpeg";
+
+// Update: Use public asset paths instead of imports
+const anirudh = "/artists/Anirudh.jpeg";
+const travis = "/artists/fein.jpeg";
+const yuvan = "/artists/yuvan.jpeg";
+const edsheeran = "/artists/Edsheeran.jpeg";
+const dualipa = "/artists/levitating.jpeg";
+const workut = "/artists/workout.jpeg";
+
 const Home = () => {
   const [songDetails, setSongDetails] = useState([]);
   const [fav, setFav] = useState([]);
@@ -65,7 +68,7 @@ const Home = () => {
         <h2 className="font-bold text-2xl text-customRed">Last Played</h2>
         <div className="flex flex-row mt-2 space-x-4 overflow-x-scroll scrollbar-hide">
           {songDetails.map((song) => (
-            <div className="flex-shrink-0 min-w-[120px] flex flex-col items-start  rounded bg-mono p-2">
+            <div key={song.id} className="flex-shrink-0 min-w-[120px] flex flex-col items-start  rounded bg-mono p-2">
               <img
                 className="rounded"
                 src={song.songCover}
@@ -165,7 +168,7 @@ const Home = () => {
           </div>
           <div className="flex items-center space-x-2 overflow-x-scroll scrollbar-hide w-[800px]">
             {fav.map((song) => (
-              <div className="bg-mono p-3 rounded min-w-[210px] cursor-pointer">
+              <div key={song.id || song.songCover} className="bg-mono p-3 rounded min-w-[210px] cursor-pointer">
                 <img
                   className="rounded h-full w-[200px]"
                   src={song.songCover}
