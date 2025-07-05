@@ -1,5 +1,5 @@
 import { getAuth } from "firebase/auth";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { FaPlay } from "react-icons/fa";
 import { collection, getDocs, doc, deleteDoc } from "firebase/firestore";
 import { db } from "../Firebase/firebaseconfig";
